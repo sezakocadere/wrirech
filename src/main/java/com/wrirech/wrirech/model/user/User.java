@@ -35,6 +35,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Status status;
     private int friendNumber;
+    @ManyToOne
     private Movie favoriteMovie;
     private Series favoriteSeries;
     private Book favoriteBook;

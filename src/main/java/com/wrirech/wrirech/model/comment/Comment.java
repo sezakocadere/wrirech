@@ -1,12 +1,10 @@
 package com.wrirech.wrirech.model.comment;
 
 import com.sun.istack.NotNull;
+import com.wrirech.wrirech.model.user.User;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.OffsetDateTime;
 
 @Entity
@@ -24,5 +22,7 @@ public class Comment {
     private String detail;
     @ManyToOne
     private Comment subComment;
+    @ManyToOne
+    private User user;
 
 }
